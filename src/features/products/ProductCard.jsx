@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useCart } from "../../hooks/useCart";
 import formatRupees from "../../utils/formateRupees";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 function ProductCard({ product }) {
   const { addItem } = useCart();
@@ -19,6 +20,7 @@ function ProductCard({ product }) {
       countInStock: product.countInStock,
       qty: 1,
     });
+    toast.success("Item added to cart!");
     setQuantity(quantity + 1);
   };
 

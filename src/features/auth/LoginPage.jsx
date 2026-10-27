@@ -41,7 +41,7 @@ function LoginPage() {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-50/40 backdrop-blur-md">
-      <div className="relative z-10 w-full max-w-md p-8 bg-white border border-gray-100 rounded-xl shadow-2xl">
+      <div className="auth-modal relative z-10 w-full max-w-md p-8 bg-white border border-gray-100 rounded-xl shadow-2xl">
         <h1 className="text-2xl font-semibold mb-6 text-gray-800 text-center">
           LOGIN
         </h1>

@@ -6,11 +6,11 @@ import { LuShoppingCart, LuUser } from "react-icons/lu";
 export default function Navbar() {
   const { isAuthenticated, checked } = useAuth();
   return (
-    <nav className="flex items-center  justify-between px-6 py-5 shadow-sm">
+    <nav className="site-navbar flex items-center justify-between px-6 py-5 shadow-sm">
       <Link to="/" className="text-3xl">
         <img src={logo} alt="apnaCart" className="h-8 w-auto" />
       </Link>
-      <div className="flex gap-6 ml-5">
+      <div className="site-navbar-links flex gap-6 ml-5">
         <NavLink
           to="/"
           className={({ isActive }) =>
@@ -61,7 +61,7 @@ export default function Navbar() {
         </NavLink>
       </div>
       {!checked ? null : isAuthenticated ? (
-        <div className="flex gap-6">
+        <div className="site-navbar-actions flex gap-6">
           <NavLink
             to="/cart"
             className={({ isActive }) =>
@@ -84,7 +84,7 @@ export default function Navbar() {
           </NavLink>
         </div>
       ) : (
-        <div className="flex gap-6">
+        <div className="site-navbar-actions flex gap-6">
           <NavLink
             to="/login"
             className={` 

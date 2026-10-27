@@ -66,7 +66,7 @@ function OrderSummaryPage() {
         </p>
       </div>
 
-      <div className="flex gap-3 justify-center">
+      <div className="responsive-actions flex gap-3 justify-center">
         <Link
           to={`/orders/${order._id}`}
           className="px-6 py-3 rounded font-semibold border border-[#1B2340]/20"

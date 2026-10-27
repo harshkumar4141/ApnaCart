@@ -3,14 +3,14 @@ import AddButton from "../../components/common/AddButton";
 import { Link } from "react-router-dom";
 function CartItem({ item, onRemove, onQtyChange }) {
   return (
-    <div className="flex items-center gap-4 py-4 border-b border-[#1B2340]/10">
+    <div className="cart-item flex items-center gap-4 py-4 border-b border-[#1B2340]/10">
       <img
         src={item.image}
         alt={item.name}
         className="w-20 h-20 object-cover rounded"
       />
 
-      <div className="flex-1">
+      <div className="cart-item-details flex-1">
         <Link to={`/products/${item._id}`}>
           <p className="font-medium">{item.name}</p>
         </Link>
@@ -23,13 +23,15 @@ function CartItem({ item, onRemove, onQtyChange }) {
       </div>
 
       <p
-        className="text-right font-semibold"
+        className="cart-item-price text-right font-semibold"
         style={{ fontFamily: "'JetBrains Mono', monospace" }}
       >
         {formatRupees(item.price * item.qty)}
       </p>
 
-      <AddButton onQtyChange={onQtyChange} onRemove={onRemove} item={item} />      
+      <div className="cart-item-controls">
+        <AddButton onQtyChange={onQtyChange} onRemove={onRemove} item={item} />
+      </div>
 
       <button
         onClick={onRemove}

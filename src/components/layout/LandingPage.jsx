@@ -16,7 +16,7 @@ function HomePage() {
   const { isAuthenticated } = useAuth();
 
   return (
-    <div style={{ backgroundColor: "#FDF1EC" }} className="text-[#1B2340]">
+    <div className="text-[#1B2340]">
       {/* HERO */}
       <section style={{ backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(${bg})` }} className="bg-cover bg-center bg-no-repeat relative overflow-hidden px-6 pt-20 pb-24 md:pt-28 md:pb-32">
         <div className="relative max-w-3xl mx-auto text-center">
@@ -65,7 +65,7 @@ function HomePage() {
       </section>
 
       {/* TRUST STRIP  */}
-      <section className="border-y border-[#1B2340]/10 py-6 px-6">
+      <section className="border-y border-[#1b233d]/10 py-6 px-6">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
             { label: "Free shipping", detail: "On orders over ₹500" },
